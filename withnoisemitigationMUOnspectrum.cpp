@@ -418,7 +418,7 @@ int main(int argc, char *argv[]) {
     // Define histograms
     TH1D* h_muon_energy = new TH1D("muon_energy", "Muon Energy Distribution (with Michel Electrons);Energy (p.e.);Counts/100 p.e.", 550, -500, 5000);
     TH1D* h_michel_energy = new TH1D("michel_energy", "Michel Electron Energy Distribution;Energy (p.e.);Counts/4 p.e.", 200, 0, 800);
-    TH1D* h_dt_michel = new TH1D("DeltaTInital", "Initial Muon-Michel Time Difference;Time to Previous event(Muon)(#mus);Counts/0.25 #mus", 64, 0, MICHEL_DT_MAX);
+    TH1D* h_dt_michel = new TH1D("DeltaTInital", "Muon-Michel Time Difference;Time to Previous event(Muon)(#mus);Counts/0.25 #mus", 64, 0, MICHEL_DT_MAX);
     TH2D* h_energy_vs_dt = new TH2D("energy_vs_dt", "Michel Energy vs Time Difference;dt (#mus);Energy (p.e.)", 160, 0, 1000, 200, 0, 2000);
     TH1D* h_side_vp_muon = new TH1D("side_vp_muon", "Side Veto Energy for Muons;Energy (ADC);Counts", 200, 0, 5000);
     TH1D* h_top_vp_muon = new TH1D("top_vp_muon", "Top Veto Energy for Muons;Energy (ADC);Counts", 200, 0, 1000);
