@@ -53,8 +53,8 @@ string getTimestamp() {
 }
 const string OUTPUT_DIR = "./AnalysisOutput_" + getTimestamp();
 
-//const std::vector<double> SIDE_VP_THRESHOLDS = {1900, 1500, 1200, 1375, 1000, 1000, 700, 500}; 
-const std::vector<double> SIDE_VP_THRESHOLDS = {750, 950, 1200, 1400, 550, 700, 700, 500}; // Channels 12-19 (ADC)
+const std::vector<double> SIDE_VP_THRESHOLDS = {1900, 1500, 1200, 1375, 1000, 1000, 700, 500}; 
+//const std::vector<double> SIDE_VP_THRESHOLDS = {750, 950, 1200, 1400, 550, 700, 700, 500}; // Channels 12-19 (ADC)
 const double TOP_VP_THRESHOLD = 450; // Channels 20-21 (ADC)
 const double FIT_MIN = 1.0; // Fit range min (µs)
 const double FIT_MAX = 16.0; // Fit range max (µs)
@@ -264,7 +264,7 @@ void createVetoPanelPlots(TH1D* h_veto_panel[10], const string& outputDir) {
 
     for (int i = 0; i < 10; i++) {
         c_combined->cd(i+1);
-        gPad->SetLogy();
+        //gPad->SetLogy();
         
         h_veto_panel[i]->SetLineColor(kBlack);
         h_veto_panel[i]->SetLineWidth(2);
@@ -351,9 +351,9 @@ int main(int argc, char *argv[]) {
     // Histograms for veto panels (12-21)
     TH1D* h_veto_panel[10]; // 10 veto panels: 12-21
     const char* veto_names[10] = {
-        "Veto Panel 12 (Side)", "Veto Panel 13 (Side)", "Veto Panel 14 (Side)", "Veto Panel 15 (Side)",
-        "Veto Panel 16 (Side)", "Veto Panel 17 (Side)", "Veto Panel 18 (Side)", "Veto Panel 19 (Side)",
-        "Veto Panel 20 (Top)", "Veto Panel 21 (Top)"
+        "Veto Panel 12 ", "Veto Panel 13", "Veto Panel 14", "Veto Panel 15",
+        "Veto Panel 16 ", "Veto Panel 17", "Veto Panel 18", "Veto Panel 19",
+        "Veto Panel 20 ", "Veto Panel 21"
     };
     
     // Initialize veto panel histograms
