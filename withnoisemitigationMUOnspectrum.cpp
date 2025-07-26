@@ -45,12 +45,6 @@ const double MICHEL_DT_MAX = 16.0;
 const int ADCSIZE = 45;
 const double PEAK_POSITION_RMS_CUT = 2.5;
 const double AREA_HEIGHT_RATIO_CUT = 1.2;
-const int SATURATION_THRESHOLD_LOW = 10;
-const int SATURATION_THRESHOLD_HIGH = 4000;
-
-// Filtering parameters
-const double CHI2_THRESHOLD = 2.0;
-const int MAX_ITERATIONS = 3;
 
 // Channel-specific trigger thresholds
 const std::vector<double> TRIGGER_THRESHOLDS = {
